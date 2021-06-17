@@ -52,6 +52,8 @@ Hopefully, by doing this work we might be able to answer the following questions
 the pencil-and-paper algorithm differ from the Brute force algorithm? Which one of them is
 more effective? Is it possible to make these algorithms more efficient?
 
+![](images/image1.jpg)
+
 # 1.2 Purpose
 
 The aim of the essay is to investigate the brute force algorithm and the pencil-and-paper
@@ -167,6 +169,8 @@ be removed from the list as a possible candidate in the row, column and box [7].
 that it is called the “naked single” method is that this kind of square contains only one
 possible candidate.
 
+![](images/image2.jpg)
+
 # Hidden Singles
 
 The hidden single method is similar to the naked single method but the way to find the way to
@@ -175,6 +179,8 @@ that can take a certain number, then the square must take that number. For examp
 3, we can see that both row2 and row3 contain the digit 9 so according to the rules, row1 must
 also hold number 9 (in the square 123def). In the right side of figure 3 below, number 9 is
 inserted by using the hidden singles method. 
+
+![](images/image3.jpg)
 
 # Locked candidate
 
@@ -192,6 +198,8 @@ the same two candidates in two squares. By using this information we can find a 
 candidate to other squares. For example in figure 4, squares 9d and 9f can only contain values
 2 and 7. By having this knowledge, it is obvious that square 9d and 9f cannot contain 1 or 6 so
 those candidates are removed. The only candidates are 2 and 7 in squares 9d and 9f.
+
+![](images/image4.jpg)
 
 # 2.3.2 Brute force algorithm
 
@@ -289,6 +297,8 @@ only one single value. Since the puzzle comes to its end solution the unique mis
 can be used to fill rest of the puzzles. Finally, if either method fills the board the algorithm
 calls the backtracking method to fill the rest of the board.
 
+![](images/image5.jpg)
+
 # 3.2 Brute Force Solver
 
 The second algorithm that is examined in this work is Brute force algorithm. Usually, the
@@ -309,6 +319,7 @@ In order to compare the pencil-and-paper algorithm with the brute force algorith
 
 In this section we present the result of the testing and also examine the differences between
 the pencil-and-paper algorithm and the brute force algorithm.
+
 The proposed algorithm has proved that is able to solve Sudoku puzzle with any levels of
 difficulty. We have assumed to have four levels of difficulty during testing. These levels are;
 easy, medium, hard and evil (challenging). This algorithm is able to solve the easy and
@@ -319,6 +330,8 @@ the brute force algorithm in the term of the runtime (the time the algorithm tak
 executed). The diagram-1 below shows the differences between these two algorithms. Note
 that the puzzles, which are used in the testing, are taken from a valid webpage [11]. The
 webpage generates Sudoku puzzles with different ratings.
+
+![](images/image6.jpg)
 
 This diagram depicts the differences between the pencil-and-paper algorithm and the brute
 force algorithm based on how long it takes to solve the puzzles by a computer. The penciland-paper algorithm solves the puzzle quicker than the brute force algorithm. The given data
@@ -340,7 +353,9 @@ the empty squares by performing fewer comparisons in short time as it uses a bet
 technique. However, the backtracking method runs more number of analytical circulation
 while solving the puzzles resulting consumption of memory space. This can clearly be shown
 in the diagram-2. The result shows that the number of comparisons in the backtracking
-method is higher than when the human strategies and backtracking methods are used together
+method is higher than when the human strategies and backtracking methods are used together.
+
+![](images/image7.jpg)
 
 # 3.4 The Difficulty Level of Sudoku Puzzles
 
@@ -367,6 +382,8 @@ might be expected that if the number of clues become more the run-time of solvin
 would be shorter. For instance, when solving the puzzle with 28 clues the solving time
 increases rapidly. The reason is that the puzzle needs more techniques to solve it or the
 algorithm needed to iterate as long as the solution is found. 
+
+![](images/image8.jpg)
 
 # 3.5 Time complexity
 
