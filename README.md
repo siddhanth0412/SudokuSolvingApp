@@ -320,12 +320,123 @@ executed). The diagram-1 below shows the differences between these two algorithm
 that the puzzles, which are used in the testing, are taken from a valid webpage [11]. The
 webpage generates Sudoku puzzles with different ratings.
 
+This diagram depicts the differences between the pencil-and-paper algorithm and the brute
+force algorithm based on how long it takes to solve the puzzles by a computer. The penciland-paper algorithm solves the puzzle quicker than the brute force algorithm. The given data
+is based on the averaging of the computing time for several puzzles that have been tested with
+the same difficulty levels such as easy, medium, hard, and evil respectively. For instance the
+time obtained for the easy level is the result of averaging several computing times with easy
+level. In the given diagram the vertical axis represents running time of the puzzles in
+milliseconds and the horizontal axis the difficulty levels.
 
+Generally, the backtracking method, which is similar to the brute force algorithm, can solve
+the puzzles quicker than the pencil-and-paper algorithm. The question now is why should we
+use backtracking and human methods together? There are three reasons to do so. Firstly, the
+purpose of this work is to implement an algorithm applying human strategies. Secondly,
+human players also use the backtracking method when they get stuck. It means that players
+check different alternatives and place the numbers in the empty squares by guessing when
+there are no options left. Finally, employing the human strategies make the algorithm more
+efficient based on the number of comparisons. In other words, the naked single method fills
+the empty squares by performing fewer comparisons in short time as it uses a better
+technique. However, the backtracking method runs more number of analytical circulation
+while solving the puzzles resulting consumption of memory space. This can clearly be shown
+in the diagram-2. The result shows that the number of comparisons in the backtracking
+method is higher than when the human strategies and backtracking methods are used together
 
+# 3.4 The Difficulty Level of Sudoku Puzzles
 
+The difficulty level of Sudoku puzzles depends on how the given numbers are placed in the
+Sudoku board and also how many numbers (clues) are given. Generally, the most significant
+aspect of difficulty ratings of Sudoku puzzles is that which techniques are required to solve
+the puzzles. In other words, it is important where the given numbers are placed logically.
+The Puzzles, which needs more techniques to solve, can be named as difficult one. On the
+other side there are puzzles that can be solved by using simple methods and this kind of
+puzzles can be defined as easy or medium level. As mentioned above, there are four difficulty
+levels that are used in testing (easy, medium, hard and evil). We have found during testing
+that the classifications of difficulty levels is not easy as it is stated. This is due to the fact that
+there have been puzzles which marked as hard level but they had been solved using simple
+techniques and vice versa.
 
+There are people who believe that the difficulty ratings have to do with the number of
+revealed numbers on the puzzle board. Generally, a Sudoku puzzle needs at least 17 clues to
+be solvable. It means that solving a Sudoku puzzle with 17-clues is more difficult than a
+puzzle with 30-clues. More given numbers, the easier and quicker the solution is. This
+statement may not be always truth, since the testing has shown that the puzzles with fewer
+clues could be solved in shorter time than the puzzles with more clues. The diagram 3 below
+describes the relation between the number of clues in the puzzles and their run-time. It is
+might be expected that if the number of clues become more the run-time of solving the puzzle
+would be shorter. For instance, when solving the puzzle with 28 clues the solving time
+increases rapidly. The reason is that the puzzle needs more techniques to solve it or the
+algorithm needed to iterate as long as the solution is found. 
 
+# 3.5 Time complexity
 
+Time complexity of an algorithm describes the time that is needed to run on a computer and it
+is commonly expressed using with O notation. One way to estimate time complexity is to
+count the number of operations achieved by the algorithm. Since the performance time can be
+changed with different inputs of the same size we use the worst-case time of complexity,
+denoted as T(n). A recent study by Kovacs showed that the worst-case complexity is related
+to the difficulty of the hardest puzzle.
+We shall examine the time complexity of Sudoku solver. The input to a Sudoku solver is a
+Sudoku board. The standard board is a 9X9 grid and both smaller and larger boards are used.
+Theses types of puzzles with small sizes can be solved quickly and faster by computer, but
+only because this is small for a computer. Solving Sudoku is one of NP-complete problems
+and it says that Sudoku algorithms do not scale well to larger boards and puzzles, for example
+10000X10000 grids is not feasible. If the size of input to Sudoku solver goes to infinity the
+time of complexity will increase exponentially. However, when solving the puzzles with
+limited input size such as 9X9 grids it is feasible because they can be solved in polynomial
+time.
 
+# 4 Conclusions
 
+This study has shown that the pencil-and-paper algorithm is a feasible method to solve any
+Sudoku puzzles. The algorithm is also an appropriate method to find a solution faster and
+more efficient compared to the brute force algorithm. The proposed algorithm is able to solve
+such puzzles with any level of difficulties in a short period of time (less than one second).
+
+The testing results have revealed that the performance of the pencil-and-paper algorithm is
+better than the brute force algorithm with respect to the computing time to solve any puzzle.
+
+The brute force algorithm seems to be a useful method to solve any Sudoku puzzles and it can
+guarantee to find at least one solution. However, this algorithm is not efficient because the
+level of difficulties is irrelevant to the algorithm. In other words, the algorithm does not adopt
+intelligent strategies to solve the puzzles. This algorithm checks all possible solutions to the
+puzzle until a valid solution is found which is a time consuming procedure resulting an
+inefficient solver. As it has already stated the main advantage of using the algorithm is the
+ability to solve any puzzles and a solution is certainly guaranteed.
+
+Further research needs to be carried out in order to optimize the pencil-and-paper algorithm.
+A possible way could be implementing of other human strategies (x-wings, swordfish, etc.).
+Other alternatives might be to establish whether it is feasible to implement an algorithm based
+only on human strategies so that no other algorithm is involved in the pencil-and-paper
+algorithm and also make sure that these strategies can solve any puzzles with any level of
+difficulties. 
+
+# 5 References
+
+1) Wikipedia [cited 2013 February 21], Web site: http://en.wikipedia.org/wiki/Sudoku
+2) Home Of Logic Puzzles [cited 2013 February 22], Web Page:
+http://www.conceptispuzzles.com/index.aspx?uri=puzzle/sudoku/classic
+3) J.F. Crook, A pencil and paper algorithm for solving Sudoku Puzzles, [Cited 2013
+February 24], Winthrop University, Webpage:
+http://www.ams.org/notices/200904/tx090400460p.pdf
+4) A.S. Showdhury, S. Skher Solving Sudoku with Boolean Algebra [Cited 2013 February
+24], International Journal of Computer Applications, Peer-reviewed Research, Webpage:
+http://research.ijcaonline.org/volume52/number21/pxc3879024.pdf
+5) N. Pillay, Finding Solutions to Sudoku Puzzles Using Human Intuitive Heuristics, South
+African Research Articles, Webpage:
+http://sacj.cs.uct.ac.za/index.php/sacj/article/viewArticle/111
+6) Ch. Xu, W. Xu, The model and Algorithm to Estimate the Difficulty Levels of Sudoku
+Puzzles, Journal of Mathematics Research, 2009 Webpage:
+http://journal.ccsenet.org/index.php/jmr/article/viewFile/3732/3336
+7) T. Davis, The Mathematics of Sudoku (http://www.geometer.org/index.html), Research
+Article, Webpage:
+http://share.dschola.it/castigliano/ips/Documentazione%20Progetto/Materiale%20Didattico/M
+atematica/1E/sudoku.pdf
+8) The figures are taken from webpage:
+http://www.conceptispuzzles.com/index.aspx?uri=puzzle/sudoku/techniques
+9) T. Kovacs, Artificial Intelligence through Search: Solving Sudoku Puzzles, Journal Papers,
+Webpage: http://www.cs.bris.ac.uk/Publications/Papers/2000948.pdf
+10) Sudoku solver using brute force, visited in Mars 2013,
+https://github.com/olav/JavaSudokuSolver
+11) The puzzle generator, visited in Mars 2013, websudoku.com/
 
